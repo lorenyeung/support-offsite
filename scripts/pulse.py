@@ -8,6 +8,7 @@ except ImportError:
     exit('This script requires the numpy module\nInstall with: sudo pip install numpy')
 
 import blinkt
+import random
 
 
 def make_gaussian(fwhm):
@@ -20,7 +21,7 @@ def make_gaussian(fwhm):
 
 def pulse():
     spacing = 360.0 / 16.0
-    hue = 0
+    hue = random.randint(1,101)
     while True:
         for z in list(range(1, 10)[::-1]) + list(range(1, 10)):
             fwhm = 5.0 / z
