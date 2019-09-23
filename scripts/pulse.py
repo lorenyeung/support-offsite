@@ -29,6 +29,7 @@ def pulse():
             y = 4
 
             for x in range(blinkt.NUM_PIXELS):
+                offset = x * spacing
                 h = ((hue + offset) % 360) / 360.0
                 #h = 0.5
                 s = 1.0
