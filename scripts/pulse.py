@@ -21,7 +21,7 @@ def make_gaussian(fwhm):
 
 def pulse():
     spacing = 360.0 / 16.0
-    hue = random.randint(1,101)
+    hue = random.randint(0,255)
     while True:
         for z in list(range(1, 10)[::-1]) + list(range(1, 10)):
             fwhm = 5.0 / z
@@ -45,4 +45,5 @@ def pulse():
             t = end - start
 
             if t < 0.04:
+                hue = random.randint(0,255)
                 time.sleep(0.04 - t)
