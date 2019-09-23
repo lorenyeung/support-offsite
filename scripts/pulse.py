@@ -28,7 +28,7 @@ def pulse():
             fwhm = 5.0 / z
             gauss = make_gaussian(fwhm)
             start = time.time()
-            y = 4
+            y = 5
 
             for x in range(blinkt.NUM_PIXELS):
                 offset = x * spacing
