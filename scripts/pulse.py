@@ -35,7 +35,7 @@ def pulse():
                 h = ((hue + offset) % 360) / 360.0
                 #h = 0.5
                 s = 1.0
-                v = gauss[0, y]
+                v = gauss[x, 0]
                 rgb = colorsys.hsv_to_rgb(h, s, v)
                 r, g, b = [int(255.0 * i) for i in rgb]
                 #r, g, b = [int(c * 255) for c in colorsys.hsv_to_rgb(h, 1.0, 1.0)]
