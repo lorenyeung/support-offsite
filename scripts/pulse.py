@@ -28,14 +28,14 @@ def pulse():
             fwhm = 5.0 / z
             gauss = make_gaussian(fwhm)
             start = time.time()
-            y = 5
+            y = 4
 
             for x in range(blinkt.NUM_PIXELS):
                 offset = x * spacing
                 h = ((hue + offset) % 360) / 360.0
                 #h = 0.5
                 s = 1.0
-                v = gauss[x, y]
+                v = gauss[0, y]
                 rgb = colorsys.hsv_to_rgb(h, s, v)
                 r, g, b = [int(255.0 * i) for i in rgb]
                 #r, g, b = [int(c * 255) for c in colorsys.hsv_to_rgb(h, 1.0, 1.0)]
